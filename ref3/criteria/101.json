@@ -1,0 +1,70 @@
+{
+  "id": "101",
+  "text": "Трассировка и просмотр всех идентификаторов (MODULE_ID, FUNC_ID, COMP_ID, NODE_ID, BLOCK_ID) через DevTools и Puppeteer+CDP: data-атрибуты в HTML для инспектора, console.log при вызове функций с ID, встроенная панель DevTools для поиска/копирования ID, интерактивность (клик → копирование ID, поиск по ID, переход к коду), автоматическая трассировка через CDP для программного доступа к ID",
+  "categories": [
+    "architecture",
+    "editor",
+    "ai-criteria",
+    "processes",
+    "tools"
+  ],
+  "tags": [
+    "ID",
+    "трассировка"
+  ],
+  "categories_info": [
+    {
+      "key": "ai-criteria",
+      "title": "Критерии для нейросети",
+      "description": "Требования к интеграции ИИ-помощника"
+    },
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "editor",
+      "title": "Движок редактора",
+      "description": "Требования к ядру редактора"
+    },
+    {
+      "key": "processes",
+      "title": "Процессы разработки",
+      "description": "Методологии и практики работы команды"
+    },
+    {
+      "key": "tools",
+      "title": "Инструменты",
+      "description": "Практические инструменты для упрощения парной разработки с ИИ-ассистентом"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Обеспечить видимость всех идентификаторов системы (MODULE_ID, FUNC_ID, COMP_ID, NODE_ID, BLOCK_ID) через DevTools и Puppeteer+CDP для упрощения отладки и навигации"
+      }
+    },
+    "editor": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Каждый DOM-элемент блока редактора должен иметь data-атрибуты с ID (data-module-id, data-component-id, data-block-id, data-node-id) для трассировки через инспектор и программного доступа"
+      }
+    },
+    "ai-criteria": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "При отладке через DevTools копировать ID элементов/функций/модулей для использования в промптах: 'Исправь ошибку в FUNC_handleClick_042 модуля MODULE_EventHandler_VER_1.0'"
+      }
+    },
+    "processes": {
+      "subcategories": [
+        "Troubleshooting и отладка"
+      ],
+      "descriptions": {
+        "Troubleshooting и отладка": "Использовать DevTools для трассировки всех ID системы: инспектор показывает data-атрибуты (data-module-id, data-func-id, data-comp-id, data-node-id, data-block-id), console.log выводит ID при вызове функций, встроенная панель DevTools для поиска/копирования ID, Puppeteer+CDP для программного доступа к ID. При воспроизведении ошибки фиксировать все ID элементов, функций и модулей из DevTools для точного указания проблемного места в баг-репорте и промптах для ИИ"
+      }
+    }
+  }
+}

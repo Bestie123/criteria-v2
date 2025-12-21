@@ -1,0 +1,47 @@
+{
+  "id": "114",
+  "text": "Dependency Inversion Principle (DIP): модули верхнего уровня не должны зависеть от модулей нижнего уровня, оба должны зависеть от абстракций",
+  "categories": [
+    "architecture",
+    "quality"
+  ],
+  "tags": [
+    "SOLID",
+    "DIP"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Зависимости должны строиться на абстракциях, а не на конкретных реализациях (Dependency Inversion Principle)"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Критические компоненты (ядро и несущие стены)",
+        "Критические компоненты (ядро и несущие стены)",
+        "Архитектурная целостность",
+        "Архитектурная целостность",
+        "Best Practices & Code Review",
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Критические компоненты (ядро и несущие стены)": "Критические компоненты зависят от абстракций, а не от конкретных реализаций (Dependency Inversion Principle)",
+        "Архитектурная целостность": "Слои зависят от абстракций (интерфейсов), а не от конкретных реализаций (Dependency Inversion Principle)",
+        "Best Practices & Code Review": "Проверять соблюдение Dependency Inversion Principle: зависимости направлены на абстракции, а не на конкретные реализации"
+      }
+    }
+  }
+}

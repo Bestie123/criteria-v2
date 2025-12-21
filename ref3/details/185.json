@@ -1,0 +1,105 @@
+{
+  "id": "185",
+  "title": "Electron.js для desktop приложений",
+  "description": "Фреймворк для создания кроссплатформенных desktop приложений используя веб-технологии",
+  "architecture": {
+    "main_process": {
+      "description": "Backend процесс с Node.js и доступом к системным API",
+      "responsibilities": [
+        "Управление окнами приложения (BrowserWindow)",
+        "Доступ к файловой системе (fs, path)",
+        "Системные API (notifications, shortcuts, tray)",
+        "IPC communication с renderer процессами",
+        "Автообновления и lifecycle управление"
+      ]
+    },
+    "renderer_process": {
+      "description": "Frontend процесс с Chromium для отображения UI",
+      "responsibilities": [
+        "Отрисовка UI используя HTML/CSS/JS",
+        "Обработка пользовательского ввода",
+        "Коммуникация с main process через IPC",
+        "Доступ к ограниченному набору Node.js API через preload"
+      ]
+    },
+    "preload_scripts": {
+      "description": "Безопасный мост между main и renderer процессами",
+      "purpose": "Expose только необходимые API в renderer с context isolation"
+    }
+  },
+  "key_features": {
+    "native_apis": [
+      "Файловая система (чтение/запись без ограничений браузера)",
+      "Системные диалоги (open, save, message, error)",
+      "Нативные меню (application menu, context menu, tray menu)",
+      "Системный трей и dock integration",
+      "Глобальные горячие клавиши",
+      "Системные уведомления",
+      "Clipboard API (расширенный)",
+      "Shell integration (открытие файлов, URL)"
+    ],
+    "offline_first": [
+      "Полная работа без интернета",
+      "Локальное хранилище без ограничений",
+      "Встроенный Chromium (не зависит от браузера пользователя)",
+      "Локальная база данных (SQLite, LevelDB)"
+    ],
+    "auto_updates": [
+      "electron-updater для автоматических обновлений",
+      "Проверка обновлений при запуске",
+      "Фоновая загрузка обновлений",
+      "Установка при перезапуске",
+      "Rollback при ошибках"
+    ],
+    "packaging": [
+      "electron-builder для создания инсталляторов",
+      "Windows: exe, msi, portable",
+      "macOS: dmg, pkg, mas (Mac App Store)",
+      "Linux: deb, rpm, AppImage, snap",
+      "Code signing для доверенных приложений"
+    ]
+  },
+  "example_structure": {
+    "main.js": "const { app, BrowserWindow, ipcMain } = require('electron');\n\nfunction createWindow() {\n  const win = new BrowserWindow({\n    width: 1200,\n    height: 800,\n    webPreferences: {\n      preload: path.join(__dirname, 'preload.js'),\n      contextIsolation: true,\n      nodeIntegration: false\n    }\n  });\n  win.loadFile('index.html');\n}\n\napp.whenReady().then(createWindow);\n\nipcMain.handle('save-file', async (event, content) => {\n  const { dialog } = require('electron');\n  const { filePath } = await dialog.showSaveDialog({});\n  if (filePath) {\n    await fs.promises.writeFile(filePath, content);\n    return { success: true };\n  }\n});",
+    "preload.js": "const { contextBridge, ipcRenderer } = require('electron');\n\ncontextBridge.exposeInMainWorld('electronAPI', {\n  saveFile: (content) => ipcRenderer.invoke('save-file', content),\n  openFile: () => ipcRenderer.invoke('open-file'),\n  onUpdateAvailable: (callback) => ipcRenderer.on('update-available', callback)\n});",
+    "renderer.js": "// В renderer процессе (веб-код)\ndocument.getElementById('save').addEventListener('click', async () => {\n  const content = editor.getContent();\n  const result = await window.electronAPI.saveFile(content);\n  if (result.success) {\n    console.log('File saved successfully');\n  }\n});"
+  },
+  "integration_with_editor": {
+    "file_system": "Прямой доступ к файлам без ограничений браузера",
+    "offline_work": "Полная работа без интернета (критерий 004)",
+    "native_menus": "File/Edit/View меню для привычного UX",
+    "auto_save": "Автосохранение в локальные файлы",
+    "recent_files": "Список недавних документов в меню",
+    "drag_drop": "Drag-and-drop файлов в приложение",
+    "system_integration": "Ассоциация файлов с приложением"
+  },
+  "advantages": [
+    "Единая кодовая база для всех платформ (Windows, macOS, Linux)",
+    "Использование знакомых веб-технологий (HTML/CSS/JS)",
+    "Доступ к полному Node.js ecosystem",
+    "Нативные возможности ОС",
+    "Автоматические обновления",
+    "Оффлайн работа",
+    "Большое сообщество и экосистема"
+  ],
+  "disadvantages": [
+    "Большой размер приложения (~100-200MB из-за Chromium)",
+    "Высокое потребление памяти",
+    "Медленный старт приложения",
+    "Сложность оптимизации производительности"
+  ],
+  "alternatives": [
+    "Tauri (Rust + WebView, меньший размер)",
+    "NW.js (похож на Electron)",
+    "Progressive Web Apps (PWA, ограниченные возможности)",
+    "Native frameworks (React Native Desktop, Qt)"
+  ],
+  "use_cases": [
+    "Превращение веб-редактора в desktop приложение",
+    "IDE и редакторы кода (VS Code, Atom)",
+    "Коммуникационные приложения (Slack, Discord)",
+    "Productivity tools (Notion, Obsidian)",
+    "Медиа приложения (Spotify, Figma)"
+  ],
+  "related_criteria": [4, 180, 162, 5, 80]
+}

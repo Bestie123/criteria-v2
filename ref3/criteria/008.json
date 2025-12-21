@@ -1,0 +1,25 @@
+{
+  "id": "008",
+  "text": "Функциональная модульность",
+  "categories": [
+    "editor"
+  ],
+  "tags": [
+    "модульность"
+  ],
+  "categories_info": [
+    {
+      "key": "editor",
+      "title": "Движок редактора",
+      "description": "Требования к ядру редактора"
+    }
+  ],
+  "contexts": {
+    "editor": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Каждый функционал в виде отдельного модуля"
+      }
+    }
+  }
+}

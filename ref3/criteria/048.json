@@ -1,0 +1,27 @@
+{
+  "id": "048",
+  "text": "Структура конструктивной критики",
+  "categories": [
+    "quality"
+  ],
+  "tags": [
+    "критика"
+  ],
+  "categories_info": [
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "quality": {
+      "subcategories": [
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Best Practices & Code Review": "Критика должна быть конструктивной: выявленная проблема → предложение улучшения → пример"
+      }
+    }
+  }
+}

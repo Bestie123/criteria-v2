@@ -1,0 +1,63 @@
+{
+  "id": "177",
+  "text": "Многопоточность и устойчивость к высоким нагрузкам: использование Web Workers для параллельного выполнения тяжелых вычислений (парсинг больших документов, индексация для поиска, обработка изображений, сложные вычисления) вне main thread для сохранения отзывчивости UI, SharedArrayBuffer для обмена данными между потоками без копирования, worker pools для переиспользования workers и управления их количеством, offscreen canvas в workers для рендеринга графики, graceful degradation при недоступности workers, rate limiting и throttling для предотвращения перегрузки (ограничение частоты запросов, debouncing пользовательского ввода, queue management для задач), circuit breaker pattern для защиты от каскадных сбоев, backpressure механизмы для контроля потока данных, connection pooling для эффективного использования ресурсов, load balancing между серверами/workers, auto-scaling при увеличении нагрузки, health checks и мониторинг состояния системы, error recovery с автоматическими retry и exponential backoff, timeout management для предотвращения зависаний",
+  "categories": [
+    "architecture",
+    "quality",
+    "tools"
+  ],
+  "tags": [
+    "Web Workers",
+    "SharedArrayBuffer",
+    "worker pools",
+    "offscreen canvas",
+    "многопоточность",
+    "параллелизм",
+    "rate limiting",
+    "throttling",
+    "circuit breaker",
+    "backpressure",
+    "load balancing",
+    "auto-scaling",
+    "устойчивость",
+    "нагрузка",
+    "resilience"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    },
+    {
+      "key": "tools",
+      "title": "Инструменты",
+      "description": "Практические инструменты для упрощения парной разработки с ИИ-ассистентом"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Архитектура многопоточности через Web Workers: создание dedicated workers для изолированного выполнения задач в отдельных потоках, shared workers для разделения ресурсов между вкладками/окнами, service workers для offline-first и background sync, worker pools с управлением жизненным циклом (создание, переиспользование, завершение workers по необходимости), task queue для распределения задач между workers с приоритизацией, message passing через postMessage для коммуникации main thread ↔ worker, transferable objects для передачи данных без копирования (ArrayBuffer, ImageBitmap), SharedArrayBuffer для синхронного доступа к памяти из разных потоков (с Atomics для синхронизации), offscreen canvas в workers для рендеринга графики без блокировки UI, comlink библиотека для упрощения RPC между threads, graceful degradation с fallback на main thread при недоступности workers (старые браузеры, ограничения безопасности). Паттерны устойчивости к нагрузке: circuit breaker pattern для предотвращения каскадных сбоев (открытие circuit при превышении порога ошибок, half-open для проверки восстановления, закрытие при успешных запросах), bulkhead pattern для изоляции ресурсов (отдельные thread pools для разных типов задач, ограничение ресурсов на операцию), retry pattern с exponential backoff (повторные попытки с увеличивающейся задержкой, jitter для избежания thundering herd), timeout pattern для предотвращения зависаний (установка максимального времени выполнения, автоматическая отмена долгих операций), backpressure для контроля потока данных (сигнализация upstream о перегрузке, приостановка отправки данных, буферизация с ограничением размера)"
+      }
+    },
+    "quality": {
+      "subcategories": ["Производительность"],
+      "descriptions": {
+        "Производительность": "Требования к производительности под нагрузкой и метрики устойчивости. Rate limiting стратегии: ограничение частоты запросов к API (token bucket algorithm, leaky bucket, fixed window, sliding window), per-user rate limits для предотвращения злоупотреблений, adaptive rate limiting с динамической корректировкой лимитов, priority queues для важных запросов, 429 Too Many Requests responses с Retry-After headers, client-side throttling для предотвращения лишних запросов. Throttling и debouncing: throttling для ограничения частоты выполнения функций (максимум N раз в секунду), debouncing для отложенного выполнения после паузы в событиях (поиск, автосохранение, resize), requestAnimationFrame throttling для плавных анимаций, requestIdleCallback для низкоприоритетных задач, Web Workers throttling для контроля нагрузки на CPU. Load testing и stress testing: симуляция высоких нагрузок (1000+ одновременных пользователей, 10K+ запросов в секунду), определение точки отказа системы (breaking point), тестирование восстановления после перегрузки, spike testing для внезапных всплесков нагрузки, soak testing для длительных нагрузок (выявление memory leaks, degradation), использование инструментов (k6, Artillery, JMeter, Gatling). Мониторинг и алерты: метрики производительности под нагрузкой (response time, throughput, error rate, CPU/memory usage), health checks endpoints для проверки состояния системы, distributed tracing для отслеживания запросов через систему, алерты на аномалии (spike в error rate, degradation производительности, resource exhaustion), dashboards для визуализации метрик в реальном времени, SLA/SLO мониторинг (99.9% uptime, p95 latency < 200ms). Auto-scaling и load balancing: горизонтальное масштабирование с добавлением instances при увеличении нагрузки, вертикальное масштабирование с увеличением ресурсов instance, load balancing алгоритмы (round-robin, least connections, weighted, IP hash), health-based routing с исключением unhealthy instances, connection pooling для эффективного использования соединений, graceful shutdown для безопасного завершения instances"
+      }
+    },
+    "tools": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Инструменты для работы с многопоточностью и нагрузкой. Worker management библиотеки: comlink для упрощения RPC между main thread и workers, workerize для автоматического создания workers из функций, greenlet для inline workers, threads.js для типизированных workers с TypeScript, workerpool для управления pool of workers. Профилирование многопоточности: Chrome DevTools Performance panel с визуализацией workers, Worker Inspector для отладки workers, CPU profiler для выявления bottlenecks, Memory profiler для поиска leaks в workers, Timeline для анализа message passing overhead. Load testing инструменты: k6 для современного load testing с JavaScript DSL, Artillery для scenario-based testing, Apache JMeter для комплексного тестирования, Gatling для high-performance testing, Locust для Python-based distributed testing, autocannon для Node.js benchmarking. Мониторинг и observability: Prometheus для сбора метрик с alerting, Grafana для визуализации метрик и dashboards, Datadog/New Relic для APM и distributed tracing, Sentry для error tracking и performance monitoring, OpenTelemetry для vendor-agnostic instrumentation, custom metrics через Performance API (PerformanceMark, PerformanceMeasure). Error recovery инструменты: retry библиотеки (retry, async-retry, p-retry) с exponential backoff, circuit breaker реализации (opossum, cockatiel), timeout utilities (p-timeout, promise-timeout), queue management (bull, bee-queue для Redis-backed queues), rate limiting middleware (express-rate-limit, rate-limiter-flexible)"
+      }
+    }
+  }
+}

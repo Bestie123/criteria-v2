@@ -1,0 +1,39 @@
+{
+  "id": "077",
+  "text": "Layout-система для группировки блоков по областям (panels, zones)",
+  "categories": [
+    "editor",
+    "prompts"
+  ],
+  "tags": [
+    "layout"
+  ],
+  "categories_info": [
+    {
+      "key": "editor",
+      "title": "Движок редактора",
+      "description": "Требования к ядру редактора"
+    },
+    {
+      "key": "prompts",
+      "title": "Промпты",
+      "description": "Стандартизированные шаблоны запросов для ИИ"
+    }
+  ],
+  "contexts": {
+    "editor": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Layout-система для группировки блоков по областям (panels, zones)"
+      }
+    },
+    "prompts": {
+      "subcategories": [
+        "Шаблоны запросов"
+      ],
+      "descriptions": {
+        "Шаблоны запросов": "Шаблон настройки layout/областей"
+      }
+    }
+  }
+}

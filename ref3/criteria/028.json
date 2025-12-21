@@ -1,0 +1,41 @@
+{
+  "id": "028",
+  "text": "Best practices для контекста",
+  "categories": [
+    "prompts",
+    "processes"
+  ],
+  "tags": [
+    "best practices"
+  ],
+  "categories_info": [
+    {
+      "key": "processes",
+      "title": "Процессы разработки",
+      "description": "Методологии и практики работы команды"
+    },
+    {
+      "key": "prompts",
+      "title": "Промпты",
+      "description": "Стандартизированные шаблоны запросов для ИИ"
+    }
+  ],
+  "contexts": {
+    "prompts": {
+      "subcategories": [
+        "Конструктивная критика (шаблоны)"
+      ],
+      "descriptions": {
+        "Конструктивная критика (шаблоны)": "Рекомендовать best practices для текущего контекста"
+      }
+    },
+    "processes": {
+      "subcategories": [
+        "Конструктивная критика"
+      ],
+      "descriptions": {
+        "Конструктивная критика": "Следование best practices при реализации изменений"
+      }
+    }
+  }
+}

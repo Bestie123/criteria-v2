@@ -1,0 +1,47 @@
+{
+  "id": "110",
+  "text": "Single Responsibility Principle (SRP): каждый модуль, класс или функция должны иметь только одну причину для изменения",
+  "categories": [
+    "architecture",
+    "quality"
+  ],
+  "tags": [
+    "SOLID",
+    "SRP"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Каждый модуль должен иметь единственную ответственность (Single Responsibility Principle)"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Критические компоненты (ядро и несущие стены)",
+        "Критические компоненты (ядро и несущие стены)",
+        "Архитектурная целостность",
+        "Архитектурная целостность",
+        "Best Practices & Code Review",
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Критические компоненты (ядро и несущие стены)": "Каждый критический компонент имеет единственную, четко определенную ответственность (Single Responsibility Principle)",
+        "Архитектурная целостность": "Каждый модуль архитектурного слоя имеет единственную ответственность (Single Responsibility Principle)",
+        "Best Practices & Code Review": "Проверять соблюдение Single Responsibility Principle: каждый модуль/класс/функция имеет только одну причину для изменения"
+      }
+    }
+  }
+}

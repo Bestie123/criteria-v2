@@ -1,0 +1,70 @@
+{
+  "id": "104",
+  "text": "Автоматическое отслеживание и защита ID в DOM: MutationObserver для всех изменений (добавление/удаление/изменение элементов и атрибутов), перехват DOM-методов (appendChild/innerHTML), WeakMap резервное хранилище, автоназначение ID элементам без ID, логирование с stack trace, режимы production (WeakMap) и development (полное логирование)",
+  "categories": [
+    "architecture",
+    "editor",
+    "ai-criteria",
+    "processes",
+    "tools"
+  ],
+  "tags": [
+    "ID",
+    "защита"
+  ],
+  "categories_info": [
+    {
+      "key": "ai-criteria",
+      "title": "Критерии для нейросети",
+      "description": "Требования к интеграции ИИ-помощника"
+    },
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "editor",
+      "title": "Движок редактора",
+      "description": "Требования к ядру редактора"
+    },
+    {
+      "key": "processes",
+      "title": "Процессы разработки",
+      "description": "Методологии и практики работы команды"
+    },
+    {
+      "key": "tools",
+      "title": "Инструменты",
+      "description": "Практические инструменты для упрощения парной разработки с ИИ-ассистентом"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Автоматическая защита ID в DOM через MutationObserver и WeakMap для предотвращения затирания ID сторонним кодом"
+      }
+    },
+    "editor": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Защита data-атрибутов с ID от затирания: MutationObserver автоотслеживание, WeakMap резерв, автовосстановление при удалении"
+      }
+    },
+    "ai-criteria": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Использовать защищённое хранилище ID (WeakMap) для восстановления затёртых ID при отладке через ИИ"
+      }
+    },
+    "processes": {
+      "subcategories": [
+        "Troubleshooting и отладка"
+      ],
+      "descriptions": {
+        "Troubleshooting и отладка": "Логировать все изменения ID через MutationObserver с stack trace для выявления кода, затирающего ID"
+      }
+    }
+  }
+}

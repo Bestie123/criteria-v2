@@ -1,0 +1,15 @@
+{
+  "version": "3.0",
+  "generated": true,
+  "total": 183,
+  "by_category": {
+    "architecture": 32,
+    "editor": 72,
+    "ai-criteria": 70,
+    "prompts": 41,
+    "quality": 94,
+    "processes": 76,
+    "tools": 21
+  },
+  "max_id": "183"
+}

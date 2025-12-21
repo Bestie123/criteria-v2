@@ -1,0 +1,25 @@
+{
+  "id": "085",
+  "text": "Уровни логирования",
+  "categories": [
+    "editor"
+  ],
+  "tags": [
+    "логирование"
+  ],
+  "categories_info": [
+    {
+      "key": "editor",
+      "title": "Движок редактора",
+      "description": "Требования к ядру редактора"
+    }
+  ],
+  "contexts": {
+    "editor": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Настраиваемые уровни логирования для разных режимов работы (разработка/production)"
+      }
+    }
+  }
+}

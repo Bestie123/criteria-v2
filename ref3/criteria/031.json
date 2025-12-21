@@ -1,0 +1,55 @@
+{
+  "id": "031",
+  "text": "Языковые/фреймворковые best practices",
+  "categories": [
+    "prompts",
+    "quality",
+    "processes"
+  ],
+  "tags": [
+    "best practices"
+  ],
+  "categories_info": [
+    {
+      "key": "processes",
+      "title": "Процессы разработки",
+      "description": "Методологии и практики работы команды"
+    },
+    {
+      "key": "prompts",
+      "title": "Промпты",
+      "description": "Стандартизированные шаблоны запросов для ИИ"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "prompts": {
+      "subcategories": [
+        "Конструктивная критика (шаблоны)"
+      ],
+      "descriptions": {
+        "Конструктивная критика (шаблоны)": "Давать рекомендации по best practices для конкретного языка/фреймворка"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Best Practices & Code Review": "Использовать актуальные community-best practices для используемого стека технологий"
+      }
+    },
+    "processes": {
+      "subcategories": [
+        "Конструктивная критика"
+      ],
+      "descriptions": {
+        "Конструктивная критика": "Рекомендации должны содержать ссылки на актуальные best practices (например, по производительности, безопасности)"
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "111",
+  "text": "Open/Closed Principle (OCP): модули должны быть открыты для расширения, но закрыты для модификации",
+  "categories": [
+    "architecture",
+    "editor",
+    "quality"
+  ],
+  "tags": [
+    "SOLID",
+    "OCP"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "editor",
+      "title": "Движок редактора",
+      "description": "Требования к ядру редактора"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Архитектура должна быть открыта для расширения, но закрыта для модификации (Open/Closed Principle)"
+      }
+    },
+    "editor": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Архитектура блоков должна позволять добавление новых типов блоков без модификации существующих (Open/Closed Principle)"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Архитектурная целостность",
+        "Архитектурная целостность",
+        "Best Practices & Code Review",
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Архитектурная целостность": "Архитектурные слои открыты для расширения через новые модули, но закрыты для модификации существующих (Open/Closed Principle)",
+        "Best Practices & Code Review": "Проверять соблюдение Open/Closed Principle: новый функционал добавляется через расширение, а не модификацию существующего кода"
+      }
+    }
+  }
+}

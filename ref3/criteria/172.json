@@ -1,0 +1,60 @@
+{
+  "id": "172",
+  "text": "Масштабируемость и производительность для больших объемов данных: обеспечение стабильной работы при 10,000+ страниц и 100,000+ блоков через ленивую загрузку контента (lazy loading), виртуализацию списков (virtual scrolling) для рендеринга только видимых элементов, pagination и infinite scroll для постепенной загрузки данных, code splitting и tree shaking для оптимизации bundle size, performance budgets и мониторинг метрик (FCP, LCP, TTI, TBT), кэширование стратегии (memory cache, disk cache, service workers), оптимизация критических путей рендеринга",
+  "categories": [
+    "architecture",
+    "editor",
+    "quality"
+  ],
+  "tags": [
+    "масштабируемость",
+    "производительность",
+    "lazy loading",
+    "виртуализация",
+    "virtual scrolling",
+    "pagination",
+    "infinite scroll",
+    "code splitting",
+    "performance budget",
+    "кэширование"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "editor",
+      "title": "Движок редактора",
+      "description": "Требования к ядру редактора"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Архитектурные принципы для масштабируемости больших объемов данных. Ленивая загрузка (lazy loading): загрузка контента только при необходимости (on-demand), отложенная загрузка тяжелых компонентов (диаграммы, таблицы, медиа) до момента их отображения, динамический импорт модулей через import() для code splitting, prefetching критических ресурсов для улучшения UX, progressive loading с показом placeholder во время загрузки. Code splitting стратегии: разделение кода на chunks по маршрутам (route-based splitting), разделение по компонентам (component-based splitting), vendor splitting для отделения библиотек от app кода, dynamic imports для условной загрузки функциональности, webpack/vite/rollup конфигурация для оптимального splitting. Tree shaking и оптимизация bundle: удаление неиспользуемого кода через tree shaking, использование ES modules для лучшего tree shaking, анализ bundle size через webpack-bundle-analyzer, минификация и compression (gzip, brotli), scope hoisting для уменьшения размера. Кэширование архитектура: многоуровневое кэширование (memory → disk → network), LRU (Least Recently Used) cache для ограничения размера, cache invalidation стратегии при обновлении данных, service workers для offline-first подхода, HTTP caching headers (Cache-Control, ETag) для browser cache, IndexedDB для хранения больших объемов данных локально"
+      }
+    },
+    "editor": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Оптимизация редактора для работы с большими объемами блоков и страниц. Виртуализация списков (virtual scrolling): рендеринг только видимых блоков в viewport (обычно 20-50 элементов), динамическое добавление/удаление элементов при скролле, использование библиотек (react-window, react-virtualized, vue-virtual-scroller), поддержка динамической высоты элементов (dynamic height), smooth scrolling без лагов при быстром скролле, сохранение позиции скролла при навигации. Pagination и infinite scroll: постепенная загрузка страниц порциями (обычно 20-50 элементов за раз), infinite scroll с автоматической подгрузкой при достижении конца списка, pagination с явными кнопками навигации для контроля, hybrid подход (pagination + infinite scroll), индикаторы загрузки (loading spinners, skeleton screens), обработка ошибок загрузки с retry механизмом. Оптимизация рендеринга блоков: мемоизация компонентов блоков (React.memo, useMemo, Vue computed), избегание лишних re-renders через shouldComponentUpdate/React.memo, batching обновлений для группировки изменений, debouncing и throttling для частых операций (поиск, фильтрация), использование requestAnimationFrame для плавных анимаций, Web Workers для тяжелых вычислений вне main thread. Управление состоянием для больших данных: нормализация данных для избежания дублирования, селекторы с мемоизацией (reselect, Vuex getters), ленивая инициализация состояния, pagination на уровне state management, оптимистичные обновления для быстрого UX"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Производительность"
+      ],
+      "descriptions": {
+        "Производительность": "Требования к производительности и метрики для больших объемов данных. Performance budgets: установка лимитов на размер bundle (initial load < 200KB gzipped, total < 1MB), лимиты на время загрузки (FCP < 1.8s, LCP < 2.5s, TTI < 3.8s), лимиты на количество запросов (< 50 requests для initial load), мониторинг и алерты при превышении budgets, интеграция в CI/CD для автоматической проверки. Core Web Vitals метрики: FCP (First Contentful Paint) - время до первого контента (цель < 1.8s), LCP (Largest Contentful Paint) - время до основного контента (цель < 2.5s), FID (First Input Delay) - задержка первого взаимодействия (цель < 100ms), CLS (Cumulative Layout Shift) - стабильность layout (цель < 0.1), TTI (Time to Interactive) - время до интерактивности (цель < 3.8s), TBT (Total Blocking Time) - общее время блокировки (цель < 300ms). Тестирование производительности: load testing для проверки поведения при 10K+ страниц, stress testing для определения пределов системы (100K+ блоков), benchmark тесты для критических операций (рендеринг, поиск, фильтрация), регрессионное тестирование производительности в CI/CD, профилирование через Chrome DevTools Performance panel, Lighthouse CI для автоматических проверок. Оптимизация критических путей: приоритизация загрузки критических ресурсов (CSS, fonts, hero images), inline критического CSS для быстрого first paint, preload/prefetch для важных ресурсов, async/defer для некритических скриптов, оптимизация шрифтов (font-display: swap, subset fonts), минимизация render-blocking ресурсов. Мониторинг в production: Real User Monitoring (RUM) для сбора метрик от реальных пользователей, интеграция с APM системами (Datadog, New Relic, Sentry Performance), алерты на деградацию производительности, A/B тестирование оптимизаций, корреляция производительности с бизнес-метриками (bounce rate, conversion)"
+      }
+    }
+  }
+}

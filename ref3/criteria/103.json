@@ -1,0 +1,66 @@
+{
+  "id": "103",
+  "text": "Автоматически генерировать уникальные идентификаторы (MODULE_ID, FUNC_ID) в виде JSDoc-комментариев в начале каждого модуля и функции для упрощения отладки, навигации и работы ИИ-ассистента с кодом",
+  "categories": [
+    "architecture",
+    "ai-criteria",
+    "quality",
+    "processes"
+  ],
+  "tags": [
+    "ID",
+    "автоматизация"
+  ],
+  "categories_info": [
+    {
+      "key": "ai-criteria",
+      "title": "Критерии для нейросети",
+      "description": "Требования к интеграции ИИ-помощника"
+    },
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "processes",
+      "title": "Процессы разработки",
+      "description": "Методологии и практики работы команды"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Каждый модуль и функция должны иметь уникальный ID в JSDoc-комментарии для трассировки и точных ссылок в промптах"
+      }
+    },
+    "ai-criteria": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Генерировать ID в JSDoc-комментариях для точных ссылок в промптах: 'Исправь FUNC_handleClick_042' вместо 'Исправь функцию handleClick в файле events.js'"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Best Practices & Code Review": "Проверять наличие MODULE_ID и FUNC_ID в JSDoc-комментариях при code review для обеспечения трассируемости"
+      }
+    },
+    "processes": {
+      "subcategories": [
+        "Troubleshooting и отладка"
+      ],
+      "descriptions": {
+        "Troubleshooting и отладка": "Использовать FUNC_ID из JSDoc-комментариев в stack trace и отчетах об ошибках для точной идентификации проблемной функции"
+      }
+    }
+  }
+}

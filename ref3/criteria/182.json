@@ -1,0 +1,45 @@
+{
+  "id": "182",
+  "text": "Принцип минимизации зависимостей между модулями через абстракции, интерфейсы, dependency injection, event-driven архитектуру. Модули взаимодействуют через контракты, а не конкретные реализации. Паттерны: Observer, Mediator, DI, Service Locator, Event Bus",
+  "categories": [
+    "architecture",
+    "quality"
+  ],
+  "tags": [
+    "Event Bus",
+    "Mediator",
+    "Observer",
+    "Service Locator",
+    "dependency injection",
+    "event-driven",
+    "interfaces",
+    "loose coupling",
+    "message bus"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Принципы: зависимость от абстракций, минимизация знаний между модулями, коммуникация через интерфейсы, события вместо прямых вызовов, применение DIP (Dependency Inversion Principle). Техники: DI контейнеры, интерфейсы, event-driven архитектура, message bus, service locator, plugin архитектура"
+      }
+    },
+    "quality": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Преимущества слабой связанности: легкость тестирования через mock объекты, простая замена реализаций без изменения клиентского кода, возможность параллельной разработки модулей, упрощение рефакторинга и поддержки, повышение переиспользуемости компонентов"
+      }
+    }
+  }
+}

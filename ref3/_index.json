@@ -1,0 +1,38 @@
+{
+  "version": "3.0",
+  "read_first": true,
+  "purpose": "Однозначная структура критериев, где ИИ всегда знает куда добавлять новые критерии.",
+  "source_of_truth": {
+    "path": "criteria/",
+    "rule": "1 критерий = 1 файл (criteria/NNN.json). Любые другие json в папке ref3 могут быть генерируемыми."
+  },
+  "generated_artifacts": [
+    {
+      "path": "_master-list.json",
+      "description": "Сводный список (generated=true). Не редактировать руками."
+    },
+    {
+      "path": "categories/*.json",
+      "description": "Срезы по категориям (generated=true)."
+    },
+    {
+      "path": "stats.json",
+      "description": "Статистика по критериям (generated=true)."
+    }
+  ],
+  "how_to_add": [
+    "Создай новый файл criteria/NNN.json (следующий свободный NNN).",
+    "Укажи: id, text, categories[], tags[].",
+    "Запусти: node scripts/build.js (он провалидирует и пересоберёт генерируемые файлы)."
+  ],
+  "helpers": [
+    {
+      "cmd": "node scripts/add-criterion.js --text \"...\" --categories architecture,quality --tags docs",
+      "result": "Создаст новый criteria/NNN.json со следующим id."
+    }
+  ],
+  "taxonomy": {
+    "path": "taxonomy.json",
+    "rule": "Категории в criteria/*.json должны быть только из taxonomy.json"
+  }
+}

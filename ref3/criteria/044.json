@@ -1,0 +1,59 @@
+{
+  "id": "044",
+  "text": "Оптимизация перерисовки и рендеринга: оптимизация алгоритмов перерисовки в реальном времени для плавного UX, минимизация reflows и repaints через batching изменений DOM, использование Virtual DOM или аналогов для эффективного обновления, мемоизация компонентов для предотвращения лишних re-renders, debouncing и throttling для частых операций, requestAnimationFrame для плавных анимаций, CSS containment и will-change для оптимизации layout, измерение FPS и frame drops",
+  "categories": [
+    "architecture",
+    "editor",
+    "quality"
+  ],
+  "tags": [
+    "производительность",
+    "рендеринг",
+    "перерисовка",
+    "reflow",
+    "repaint",
+    "Virtual DOM",
+    "мемоизация",
+    "FPS",
+    "оптимизация"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "editor",
+      "title": "Движок редактора",
+      "description": "Требования к ядру редактора"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Архитектурные подходы к оптимизации рендеринга. Virtual DOM или аналоги: использование Virtual DOM (React, Vue, Preact) для эффективного обновления реального DOM, diffing алгоритм для определения минимальных изменений, batching обновлений для группировки изменений в один reflow, reconciliation для оптимального применения изменений, альтернативы Virtual DOM (Svelte compile-time optimization, Solid.js fine-grained reactivity). Batching изменений DOM: группировка множественных DOM операций в один batch для минимизации reflows, использование DocumentFragment для массовых вставок элементов, requestAnimationFrame для синхронизации с browser paint cycle, debouncing частых обновлений (например при вводе текста), throttling для ограничения частоты обновлений (например при скролле). CSS containment и isolation: использование CSS contain property для изоляции layout/paint/size, will-change для подсказки браузеру о будущих изменениях, transform и opacity для GPU-accelerated анимаций, избегание layout thrashing через чтение и запись DOM в отдельных фазах, использование CSS Grid/Flexbox вместо float для современного layout"
+      }
+    },
+    "editor": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Оптимизация рендеринга блоков редактора для плавного UX. Мемоизация компонентов: React.memo для предотвращения re-render при неизменных props, useMemo для кэширования вычислений, useCallback для стабильных функций, Vue computed properties для кэширования, shouldComponentUpdate для ручного контроля обновлений, PureComponent для shallow comparison props. Оптимизация списков блоков: key prop для стабильной идентификации элементов при re-render, виртуализация для рендеринга только видимых блоков, windowing для ограничения количества DOM nodes, lazy rendering для отложенной загрузки тяжелых блоков, skeleton screens для placeholder во время загрузки. Debouncing и throttling: debouncing для поиска и фильтрации (обычно 300ms), throttling для скролла и resize (обычно 16ms для 60fps), использование lodash.debounce/throttle или custom implementations, cancelable debounce для немедленного выполнения при необходимости, leading/trailing edge options для контроля выполнения. RequestAnimationFrame для анимаций: использование rAF вместо setTimeout/setInterval для плавных анимаций, синхронизация с browser repaint cycle (60fps), автоматическая пауза при неактивной вкладке для экономии ресурсов, polyfill для старых браузеров, cancellation через cancelAnimationFrame. Оптимизация ввода текста: contentEditable оптимизация для плавного ввода, debouncing автосохранения (обычно 1-2s), оптимистичные обновления для мгновенного feedback, undo/redo через command pattern без полного re-render, cursor position preservation при обновлениях"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Производительность"
+      ],
+      "descriptions": {
+        "Производительность": "Метрики и требования к производительности рендеринга. FPS и плавность: поддержание 60 FPS (16.67ms per frame) для плавного UX, измерение FPS через Performance API или Chrome DevTools, выявление frame drops и jank (пропущенные кадры), цель < 5% dropped frames при обычном использовании, smooth scrolling без лагов и stuttering. Reflow и repaint метрики: минимизация forced synchronous layout (layout thrashing), измерение количества reflows через Performance timeline, цель < 10 reflows для типичной операции, избегание layout-triggering properties в hot paths (offsetWidth, scrollTop), batching DOM reads и writes для минимизации reflows. Layout shift метрики: CLS (Cumulative Layout Shift) < 0.1 для стабильного layout, предотвращение unexpected layout shifts при загрузке контента, резервирование пространства для динамического контента (skeleton screens), использование aspect-ratio для изображений и видео, избегание вставки контента над существующим. Paint метрики: First Paint и First Contentful Paint для perceived performance, измерение paint time через Performance API, цель < 50ms для paint операций, использование CSS containment для изоляции paint, избегание expensive CSS properties (box-shadow, gradients) в hot paths. Инструменты измерения: Chrome DevTools Performance panel для детального профилирования, Lighthouse для automated performance audits, WebPageTest для real-world testing, Performance Observer API для programmatic monitoring, custom performance marks для измерения специфичных операций"
+      }
+    }
+  }
+}

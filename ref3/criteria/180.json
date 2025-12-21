@@ -1,0 +1,56 @@
+{
+  "id": "180",
+  "text": "Browser extension для архивирования веб-страниц с правильной структурой папок (css/, js/, img/) в ZIP-архив, работающий 100% офлайн, автоматический дамп DOM с ID элементов для передачи ИИ-ассистенту при отладке, поддержка SPA, lazy-load, timestamp-имена архивов",
+  "categories": [
+    "ai-criteria",
+    "processes",
+    "tools"
+  ],
+  "tags": [
+    "JSZip",
+    "Manifest V3",
+    "RealWebArchive",
+    "ZIP",
+    "архивирование",
+    "browser extension",
+    "дамп",
+    "офлайн"
+  ],
+  "categories_info": [
+    {
+      "key": "ai-criteria",
+      "title": "Критерии для нейросети",
+      "description": "Требования к интеграции ИИ-помощника"
+    },
+    {
+      "key": "processes",
+      "title": "Процессы разработки",
+      "description": "Методологии и практики работы команды"
+    },
+    {
+      "key": "tools",
+      "title": "Инструменты",
+      "description": "Практические инструменты для упрощения парной разработки с ИИ-ассистентом"
+    }
+  ],
+  "contexts": {
+    "ai-criteria": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Автоматический дамп DOM с ID элементов для точной передачи контекста ИИ-ассистенту при отладке и анализе структуры страницы"
+      }
+    },
+    "processes": {
+      "subcategories": ["Troubleshooting и отладка"],
+      "descriptions": {
+        "Troubleshooting и отладка": "Сохранение полной структуры страницы для последующего анализа ошибок и воспроизведения проблем в офлайн-режиме"
+      }
+    },
+    "tools": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Browser extension на Manifest V3 с JSZip для создания архивов веб-страниц с правильной организацией ресурсов по папкам"
+      }
+    }
+  }
+}

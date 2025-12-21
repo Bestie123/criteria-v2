@@ -1,0 +1,53 @@
+{
+  "id": "014",
+  "text": "Множественные варианты решений",
+  "categories": [
+    "ai-criteria",
+    "prompts",
+    "quality"
+  ],
+  "tags": [
+    "варианты"
+  ],
+  "categories_info": [
+    {
+      "key": "ai-criteria",
+      "title": "Критерии для нейросети",
+      "description": "Требования к интеграции ИИ-помощника"
+    },
+    {
+      "key": "prompts",
+      "title": "Промпты",
+      "description": "Стандартизированные шаблоны запросов для ИИ"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "ai-criteria": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Предлагать различные варианты решения проблем на выбор"
+      }
+    },
+    "prompts": {
+      "subcategories": [
+        "Конструктивная критика (шаблоны)"
+      ],
+      "descriptions": {
+        "Конструктивная критика (шаблоны)": "Сравнивать несколько подходов к решению проблемы"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Best Practices & Code Review": "Рассматривать несколько вариантов решений при добавлении сложного функционала"
+      }
+    }
+  }
+}

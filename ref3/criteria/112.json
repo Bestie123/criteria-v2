@@ -1,0 +1,44 @@
+{
+  "id": "112",
+  "text": "Liskov Substitution Principle (LSP): объекты должны быть заменяемы экземплярами их подтипов без нарушения корректности программы",
+  "categories": [
+    "architecture",
+    "quality"
+  ],
+  "tags": [
+    "SOLID",
+    "LSP"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Компоненты должны быть взаимозаменяемы без нарушения работы системы (Liskov Substitution Principle)"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Архитектурная целостность",
+        "Архитектурная целостность",
+        "Best Practices & Code Review",
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Архитектурная целостность": "Модули одного слоя взаимозаменяемы при соблюдении контракта слоя (Liskov Substitution Principle)",
+        "Best Practices & Code Review": "Проверять соблюдение Liskov Substitution Principle: наследники и реализации интерфейсов корректно заменяют базовые типы"
+      }
+    }
+  }
+}

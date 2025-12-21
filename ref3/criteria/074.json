@@ -1,0 +1,51 @@
+{
+  "id": "074",
+  "text": "Lifecycle hooks для блоков (onCreate, onUpdate, onDestroy)",
+  "categories": [
+    "editor",
+    "ai-criteria",
+    "quality"
+  ],
+  "tags": [
+    "lifecycle"
+  ],
+  "categories_info": [
+    {
+      "key": "ai-criteria",
+      "title": "Критерии для нейросети",
+      "description": "Требования к интеграции ИИ-помощника"
+    },
+    {
+      "key": "editor",
+      "title": "Движок редактора",
+      "description": "Требования к ядру редактора"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "editor": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Lifecycle hooks для блоков (onCreate, onUpdate, onDestroy)"
+      }
+    },
+    "ai-criteria": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Помощь в написании lifecycle hooks для блоков"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Best Practices & Code Review": "Проверка правильности использования lifecycle hooks"
+      }
+    }
+  }
+}

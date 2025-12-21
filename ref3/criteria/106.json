@@ -1,0 +1,48 @@
+{
+  "id": "106",
+  "text": "Автоматическая валидация уникальности и корректности MODULE_ID, FUNC_ID при коммите с регенерацией дубликатов и несоответствий формату",
+  "categories": [
+    "quality",
+    "processes",
+    "tools"
+  ],
+  "tags": [
+    "валидация",
+    "ID"
+  ],
+  "categories_info": [
+    {
+      "key": "processes",
+      "title": "Процессы разработки",
+      "description": "Методологии и практики работы команды"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    },
+    {
+      "key": "tools",
+      "title": "Инструменты",
+      "description": "Практические инструменты для упрощения парной разработки с ИИ-ассистентом"
+    }
+  ],
+  "contexts": {
+    "quality": {
+      "subcategories": [
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Best Practices & Code Review": "Автоматически проверять уникальность и корректность MODULE_ID, FUNC_ID при code review и коммите"
+      }
+    },
+    "processes": {
+      "subcategories": [
+        "Работа с задачами"
+      ],
+      "descriptions": {
+        "Работа с задачами": "Валидировать уникальность MODULE_ID и FUNC_ID перед коммитом для предотвращения конфликтов"
+      }
+    }
+  }
+}

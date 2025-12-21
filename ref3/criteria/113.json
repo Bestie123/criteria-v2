@@ -1,0 +1,44 @@
+{
+  "id": "113",
+  "text": "Interface Segregation Principle (ISP): клиенты не должны зависеть от интерфейсов, которые они не используют",
+  "categories": [
+    "architecture",
+    "quality"
+  ],
+  "tags": [
+    "SOLID",
+    "ISP"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Модули не должны зависеть от неиспользуемых интерфейсов (Interface Segregation Principle)"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Архитектурная целостность",
+        "Архитектурная целостность",
+        "Best Practices & Code Review",
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Архитектурная целостность": "Интерфейсы между слоями минимальны и специфичны для каждого потребителя (Interface Segregation Principle)",
+        "Best Practices & Code Review": "Проверять соблюдение Interface Segregation Principle: интерфейсы не содержат неиспользуемых методов"
+      }
+    }
+  }
+}

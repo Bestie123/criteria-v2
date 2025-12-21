@@ -1,0 +1,51 @@
+{
+  "id": "086",
+  "text": "Экспорт и анализ логов",
+  "categories": [
+    "editor",
+    "ai-criteria",
+    "processes"
+  ],
+  "tags": [
+    "логирование"
+  ],
+  "categories_info": [
+    {
+      "key": "ai-criteria",
+      "title": "Критерии для нейросети",
+      "description": "Требования к интеграции ИИ-помощника"
+    },
+    {
+      "key": "editor",
+      "title": "Движок редактора",
+      "description": "Требования к ядру редактора"
+    },
+    {
+      "key": "processes",
+      "title": "Процессы разработки",
+      "description": "Методологии и практики работы команды"
+    }
+  ],
+  "contexts": {
+    "editor": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Экспорт логов в файл для анализа и отладки"
+      }
+    },
+    "ai-criteria": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Анализ логов для выявления паттернов ошибок и предложения улучшений"
+      }
+    },
+    "processes": {
+      "subcategories": [
+        "Troubleshooting и отладка"
+      ],
+      "descriptions": {
+        "Troubleshooting и отладка": "Экспортировать и анализировать логи для выявления паттернов ошибок"
+      }
+    }
+  }
+}

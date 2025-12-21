@@ -1,0 +1,27 @@
+{
+  "id": "047",
+  "text": "Обоснование изменений кода",
+  "categories": [
+    "quality"
+  ],
+  "tags": [
+    "документация"
+  ],
+  "categories_info": [
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "quality": {
+      "subcategories": [
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Best Practices & Code Review": "Все предложения по изменению кода должны сопровождаться обоснованием и примерами"
+      }
+    }
+  }
+}

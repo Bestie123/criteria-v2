@@ -1,0 +1,25 @@
+{
+  "id": "006",
+  "text": "Организация модулей",
+  "categories": [
+    "architecture"
+  ],
+  "tags": [
+    "модули"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Каждый модуль — отдельная папка со своими файлами"
+      }
+    }
+  }
+}

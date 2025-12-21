@@ -1,0 +1,25 @@
+{
+  "id": "002",
+  "text": "Модульность архитектуры",
+  "categories": [
+    "architecture"
+  ],
+  "tags": [
+    "модульность"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Модульность движка"
+      }
+    }
+  }
+}

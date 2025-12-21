@@ -1,0 +1,41 @@
+{
+  "id": "027",
+  "text": "Оценка архитектурных компромиссов",
+  "categories": [
+    "prompts",
+    "quality"
+  ],
+  "tags": [
+    "trade-offs"
+  ],
+  "categories_info": [
+    {
+      "key": "prompts",
+      "title": "Промпты",
+      "description": "Стандартизированные шаблоны запросов для ИИ"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    }
+  ],
+  "contexts": {
+    "prompts": {
+      "subcategories": [
+        "Конструктивная критика (шаблоны)"
+      ],
+      "descriptions": {
+        "Конструктивная критика (шаблоны)": "Оценивать trade-offs разных архитектурных решений"
+      }
+    },
+    "quality": {
+      "subcategories": [
+        "Best Practices & Code Review"
+      ],
+      "descriptions": {
+        "Best Practices & Code Review": "Оценивать trade-offs разных архитектурных решений"
+      }
+    }
+  }
+}

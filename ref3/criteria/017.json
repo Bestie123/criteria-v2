@@ -1,0 +1,26 @@
+{
+  "id": "017",
+  "text": "Оценка рисков рефакторинга",
+  "categories": [
+    "ai-criteria"
+  ],
+  "tags": [
+    "рефакторинг",
+    "риски"
+  ],
+  "categories_info": [
+    {
+      "key": "ai-criteria",
+      "title": "Критерии для нейросети",
+      "description": "Требования к интеграции ИИ-помощника"
+    }
+  ],
+  "contexts": {
+    "ai-criteria": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Оценивать риски и преимущества каждого варианта рефакторинга"
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "098",
+  "text": "Расширенная автоматизированная отладка через Puppeteer + Chrome DevTools Protocol (CDP): программное управление браузером для воспроизведения ошибок, глубокая трассировка с перехватом всех событий (DOM mutations, Network requests/responses, Console logs/errors/warnings, JavaScript Exceptions, Performance events, Resource loading), запись сценариев действий пользователя, снятие скриншотов/видео при ошибках, профилирование CPU/памяти, coverage analysis, трассировка performance metrics, автоматическое создание регрессионных тестов на основе записанных сценариев",
+  "categories": [
+    "quality",
+    "processes",
+    "tools"
+  ],
+  "tags": [
+    "отладка",
+    "автоматизация"
+  ],
+  "categories_info": [
+    {
+      "key": "processes",
+      "title": "Процессы разработки",
+      "description": "Методологии и практики работы команды"
+    },
+    {
+      "key": "quality",
+      "title": "Требования к качеству",
+      "description": "Нефункциональные требования и стандарты"
+    },
+    {
+      "key": "tools",
+      "title": "Инструменты",
+      "description": "Практические инструменты для упрощения парной разработки с ИИ-ассистентом"
+    }
+  ],
+  "contexts": {
+    "quality": {
+      "subcategories": [
+        "Производительность"
+      ],
+      "descriptions": {
+        "Производительность": "Профилирование через Puppeteer + CDP: CPU profiling, memory snapshots, coverage analysis, performance metrics. Ссылка: https://grok.com/c/5101a39d-39f9-4a31-9987-d881b336a909"
+      }
+    },
+    "processes": {
+      "subcategories": [
+        "Troubleshooting и отладка"
+      ],
+      "descriptions": {
+        "Troubleshooting и отладка": "Использовать Puppeteer + CDP для автоматизации отладки: глубокая трассировка с перехватом DOM/Network/Console/Exceptions/Performance событий, запись сценариев воспроизведения, скриншоты/видео при ошибках, профилирование, создание регрессионных тестов. Ссылка: https://grok.com/c/5101a39d-39f9-4a31-9987-d881b336a909"
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "184",
+  "title": "Puppeteer + Chrome DevTools Protocol (CDP)",
+  "description": "Комплексный инструмент для программного управления браузером через CDP API",
+  "capabilities": {
+    "automation": [
+      "Headless и headful режимы работы",
+      "Навигация по страницам и SPA",
+      "Клики, ввод текста, скроллинг",
+      "Ожидание элементов и событий",
+      "Множественные вкладки и контексты"
+    ],
+    "testing": [
+      "E2E тестирование пользовательских сценариев",
+      "Визуальное регрессионное тестирование (скриншоты)",
+      "Проверка accessibility (a11y)",
+      "Performance testing и метрики",
+      "Coverage analysis (CSS/JS)"
+    ],
+    "debugging": [
+      "Перехват console.log/error/warn",
+      "JavaScript exceptions tracking",
+      "Network requests/responses monitoring",
+      "DOM mutations observation",
+      "Breakpoints и step-by-step execution"
+    ],
+    "profiling": [
+      "CPU profiling и flame graphs",
+      "Memory heap snapshots",
+      "Performance timeline recording",
+      "Network throttling simulation",
+      "Device emulation (mobile, tablet)"
+    ],
+    "content_generation": [
+      "PDF generation из веб-страниц",
+      "Screenshots (full page, element, viewport)",
+      "HTML to image conversion",
+      "Web scraping и data extraction",
+      "Automated form filling"
+    ]
+  },
+  "cdp_domains": {
+    "Page": "Навигация, lifecycle events, скриншоты, PDF, viewport",
+    "Network": "Request interception, response modification, cookies, cache",
+    "Runtime": "JavaScript execution, console API, remote objects",
+    "Debugger": "Breakpoints, pause/resume, step execution, call frames",
+    "Performance": "Metrics (FCP, LCP, TTI), timeline recording, profiling",
+    "Coverage": "CSS/JS coverage analysis, unused code detection",
+    "DOM": "DOM tree inspection, node manipulation, event listeners",
+    "Emulation": "Device emulation, geolocation, sensors, media features"
+  },
+  "example_usage": {
+    "screenshot": "const browser = await puppeteer.launch();\nconst page = await browser.newPage();\nawait page.goto('https://example.com');\nawait page.screenshot({path: 'screenshot.png', fullPage: true});\nawait browser.close();",
+    "network_intercept": "await page.setRequestInterception(true);\npage.on('request', request => {\n  if (request.resourceType() === 'image') request.abort();\n  else request.continue();\n});",
+    "performance": "const metrics = await page.metrics();\nconst performanceMetrics = await page.evaluate(() => JSON.stringify(window.performance.timing));",
+    "coverage": "await page.coverage.startJSCoverage();\nawait page.goto('https://example.com');\nconst coverage = await page.coverage.stopJSCoverage();\nconst unusedBytes = coverage.reduce((acc, entry) => acc + entry.ranges.reduce((sum, range) => sum + range.end - range.start, 0), 0);"
+  },
+  "integration_with_criteria": {
+    "101": "Трассировка ID через CDP Runtime domain",
+    "098": "Расширенная автоматизированная отладка",
+    "171": "Анализ call stacks через Debugger domain",
+    "102": "Автоматическая генерация контекстных отчетов об ошибках",
+    "050": "Автоматизация тестирования изменений"
+  },
+  "best_practices": [
+    "Использовать headless режим для CI/CD",
+    "Настраивать timeout для медленных операций",
+    "Закрывать браузер в finally блоке",
+    "Использовать page.waitForSelector вместо setTimeout",
+    "Включать slowMo для отладки",
+    "Использовать screenshots при падении тестов",
+    "Эмулировать реальные условия (network, device)"
+  ],
+  "related_criteria": [101, 98, 171, 102, 50, 42]
+}

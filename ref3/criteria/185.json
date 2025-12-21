@@ -1,0 +1,55 @@
+{
+  "id": "185",
+  "text": "Electron.js для создания кроссплатформенных desktop приложений на базе веб-технологий (HTML/CSS/JS): нативный доступ к файловой системе и системным API, полноценная оффлайн работа, автоматические обновления, нативные меню и системный трей, интеграция с ОС (notifications, shortcuts), упаковка в exe/dmg/deb, встроенный Chromium и Node.js",
+  "categories": [
+    "architecture",
+    "editor",
+    "tools"
+  ],
+  "tags": [
+    "Chromium",
+    "Electron",
+    "Node.js",
+    "desktop",
+    "кроссплатформенность",
+    "нативные API",
+    "оффлайн"
+  ],
+  "categories_info": [
+    {
+      "key": "architecture",
+      "title": "Общие архитектурные принципы для движка",
+      "description": "Фундаментальные правила построения всей системы"
+    },
+    {
+      "key": "editor",
+      "title": "Движок редактора",
+      "description": "Требования к ядру редактора"
+    },
+    {
+      "key": "tools",
+      "title": "Инструменты",
+      "description": "Практические инструменты для упрощения парной разработки с ИИ-ассистентом"
+    }
+  ],
+  "contexts": {
+    "architecture": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Архитектура Electron: Main process (Node.js backend с доступом к системным API), Renderer process (Chromium frontend с веб-технологиями), IPC communication между процессами, preload scripts для безопасного API exposure, context isolation для security"
+      }
+    },
+    "editor": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Превращение веб-редактора в полноценное desktop приложение: нативный доступ к файловой системе для сохранения документов, оффлайн работа без интернета, нативные меню (File, Edit, View), системный трей для фоновой работы, drag-and-drop файлов, нативные диалоги (open, save, message box)"
+      }
+    },
+    "tools": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Electron tooling: electron-builder для упаковки (Windows exe, macOS dmg, Linux deb/AppImage), electron-updater для автообновлений, electron-store для хранения настроек, DevTools для отладки, Hot reload для разработки"
+      }
+    }
+  }
+}

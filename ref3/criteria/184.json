@@ -1,0 +1,56 @@
+{
+  "id": "184",
+  "text": "Puppeteer с Chrome DevTools Protocol (CDP) для программного управления браузером: автоматизация тестирования, скриншоты/PDF генерация, перехват и модификация сетевых запросов, эмуляция устройств и сетевых условий, профилирование производительности и памяти, отладка JavaScript, E2E тестирование, web scraping, генерация контента, запись и воспроизведение пользовательских сценариев",
+  "categories": [
+    "ai-criteria",
+    "processes",
+    "tools"
+  ],
+  "tags": [
+    "CDP",
+    "Chrome DevTools Protocol",
+    "E2E",
+    "Puppeteer",
+    "автоматизация",
+    "отладка",
+    "профилирование",
+    "тестирование"
+  ],
+  "categories_info": [
+    {
+      "key": "ai-criteria",
+      "title": "Критерии для нейросети",
+      "description": "Требования к интеграции ИИ-помощника"
+    },
+    {
+      "key": "processes",
+      "title": "Процессы разработки",
+      "description": "Методологии и практики работы команды"
+    },
+    {
+      "key": "tools",
+      "title": "Инструменты",
+      "description": "Практические инструменты для упрощения парной разработки с ИИ-ассистентом"
+    }
+  ],
+  "contexts": {
+    "ai-criteria": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Автоматическая генерация тестовых сценариев, сбор контекста для ИИ (DOM структура, network logs, console output), автоматическое воспроизведение ошибок для анализа ИИ-ассистентом"
+      }
+    },
+    "processes": {
+      "subcategories": ["Troubleshooting и отладка"],
+      "descriptions": {
+        "Troubleshooting и отладка": "Программное управление браузером для воспроизведения ошибок, глубокая трассировка событий (DOM mutations, Network, Console, Exceptions, Performance), запись сценариев, снятие скриншотов/видео при ошибках, профилирование CPU/памяти, coverage analysis"
+      }
+    },
+    "tools": {
+      "subcategories": [],
+      "descriptions": {
+        "null": "Headless Chrome automation через CDP API: Page domain (навигация, скриншоты, PDF), Network domain (перехват запросов, эмуляция условий), Runtime domain (выполнение JS, console API), Debugger domain (breakpoints, step execution), Performance domain (метрики, профилирование), Coverage domain (CSS/JS coverage)"
+      }
+    }
+  }
+}
